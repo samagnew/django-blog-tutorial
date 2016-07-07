@@ -1,4 +1,18 @@
 <html>
-    <h1>Happy Day</h1>
-    <p>soon to be more</p?
+    <head>
+        <title>Sam's Mighty Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Sam's Mighty Blog</a></h1>
+        </div>
+
+  {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+  {% endfor %}
+    </body>
 </html>
